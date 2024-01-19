@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
 import { BASE_URL } from "../constants/constants";
 import axios from "axios";
-import {Title,NameContainer } from '../style'
-import { Card } from '../components/Card/Card'
+//import {Title,NameContainer } from '../style'
+//import { Card } from '../components/Card/Card'
 
-
-const UserNamesPage = () => {
+export function useCapturarNome(){
   const [nomeUsuarios, setNomeUsuarios] = useState([]);
  
-
   useEffect(() => {
     axios
       .get(`${BASE_URL}users`)
@@ -20,7 +18,10 @@ const UserNamesPage = () => {
       });
   }, []);
 
-  return (
+  return nomeUsuarios;
+}
+
+  /* return (
     <div>
       <Title>Nomes dos usuários</Title>
       <NameContainer>
@@ -28,17 +29,17 @@ const UserNamesPage = () => {
           return(
           <Card 
           key={usuario.id} 
-          text={usuario.name} 
-          backgroudColor={'nome'}
-          textColor={'nome'}
+          text={usuario.name} nomeUsuarios
+          backgroudColor={'none'}
+          textColor={'none'}
           />)
         })}
       </NameContainer>
     </div>
-  );
-}
+  ); */
 
-export default  UserNamesPage;
+
+//export default useCapturarNome;
 
 
 

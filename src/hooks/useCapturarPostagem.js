@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import { BASE_URL } from "../constants/constants";
 import axios from "axios";
-import {Title,PostContainer } from '../style'
-import { Card } from '../components/Card/Card'
+//import {Title,PostContainer } from '../style'
+//import { Card } from '../components/Card/Card'
 
 
-const  CommentsPage = () => {
+export function useCapturarPostagem(){
   const [postagens, setPostagens] = useState([]);
-
 
   useEffect(() => {
     axios
@@ -20,7 +19,10 @@ const  CommentsPage = () => {
       });
   }, []);
 
-  return (
+  return postagens;
+}
+
+  /* return (
     <div>
       <Title>Comentários dos usuários</Title>
       <PostContainer>
@@ -37,10 +39,10 @@ const  CommentsPage = () => {
       })}
       </PostContainer>
     </div>
-  );
-}
+  ); */
 
-export default CommentsPage;
+
+//export default useCapturarPostagem;
 
 
 

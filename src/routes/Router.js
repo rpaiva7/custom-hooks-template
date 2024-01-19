@@ -1,6 +1,6 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import UserNamesPage from "../pages/UserNamesPage";
-import CommentsPage from "../pages/CommentsPage";
+/* import { BrowserRouter, Route, Routes } from "react-router-dom";
+import UserNamesPage from "../hooks/UserNamesPage";
+import CommentsPage from "../hooks/CommentsPage";
 import { Header } from "../components/Header/Header";
 
 const Router = () => {
@@ -15,4 +15,4 @@ const Router = () => {
     )
 }
 
-export default Router
+export default Router */
