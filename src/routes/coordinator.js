@@ -1,7 +1,7 @@
-export const goToNamesPage = (navigate) => {
+/* export const goToNamesPage = (navigate) => {
     navigate("/")
 }
 
 export const goToCommentsPage = (navigate) => {
     navigate("/comments")
-}
+} */
